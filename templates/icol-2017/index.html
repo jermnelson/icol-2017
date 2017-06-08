@@ -1,0 +1,36 @@
+{% extends 'icol-2017/base.html' %}
+
+{% block main %}
+<div class="container">
+    <h2>International Conference on Libraries 2017</h2>
+    <h1>Lean Libraries from Local Practice to Larger Collaborations</h1>
+    <h4>Video Keynote by Jeremy Nelson</h4>
+    <div class="row">
+        <section class="column column-67">
+            <video controls src="#" width="600px"></video>
+
+        </section>
+        <section class="column">
+            <h3>Topics</h3>
+            <ul>
+                <li>
+                    <a href="{{ url_for('deck', slide='what-is-a-lean-library') }}">What is a Lean Library?</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('deck', slide='pull-vs-push-for-library-services') }}">Pull vs. Push for Library Services</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('deck', slide='build-measure-learn-project-management') }}">Build-Measure-Learn Project Management</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('deck', slide='starting-lean-locally') }}">Starting Lean Locally</a> 
+                </li>
+                <li>
+                    <a href="{{ url_for('deck', slide='collaborating-partners') }}">Collaborating Partners</a>
+                </li>
+            </ul>
+            <h3>Resources</h3>
+        </section>
+    </div>
+</div>
+{% endblock %}

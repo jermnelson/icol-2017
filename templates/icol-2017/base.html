@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>ICOL 2017 - Keynote Video by Jeremy Nelson</title>
-        <author>Jeremy Nelson</author>
-        <description>ICOL 2017 - Keynote Video by Jeremy Nelson</description>
+        {#<author>Jeremy Nelson</author>
+        <description>ICOL 2017 - Keynote Video by Jeremy Nelson</description>#}
         <!-- Google Fonts -->
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
@@ -12,10 +12,11 @@
         <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
 
         <!-- Milligram CSS minified -->
-        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/milligram.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+       
     </head>
     <body>
-        {% block main %]{% endblock %}
+        {% block main %}{% endblock %}
     </body>
 </html>

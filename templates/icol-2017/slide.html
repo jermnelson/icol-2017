@@ -1,0 +1,21 @@
+{% extends 'icol-2017/base.html' %}
+
+{% block main %}
+<div class="container">
+    <h2>{{ page.meta.title }}</h2>
+
+    <div class="row">
+        <section class="column column-25">
+            {% if page.meta.previous %}
+                <a class="button button-outline" href="{{ url_for('deck', slide=page.meta.previous) }}">Previous</a>
+            {% endif %}
+            {% if page.meta.next %}
+                <a class="button button-orange" href="{{ url_for('deck', slide=page.meta.next) }}">Next</a>
+            {% endif %}
+        </section>
+        <section class="column">
+            {{ page.html|safe }}
+        </section>
+    </div>
+</div>
+{% endblock %}
