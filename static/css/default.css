@@ -7,4 +7,7 @@ h1 {
     border-color:  #FF5A01;
 }
 
-
+.button-blue-outline {
+    background-color: transparent;
+    color: #431553;
+}

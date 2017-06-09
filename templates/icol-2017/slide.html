@@ -2,15 +2,24 @@
 
 {% block main %}
 <div class="container">
-    <h2>{{ page.meta.title }}</h2>
+    <h1>{{ page.meta.title }}</h1>
 
     <div class="row">
         <section class="column column-25">
             {% if page.meta.previous %}
-                <a class="button button-outline" href="{{ url_for('deck', slide=page.meta.previous) }}">Previous</a>
+                <a class="button button-blue-outline" href="{{ url_for('deck', slide=page.meta.previous) }}">
+                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                    Previous
+                </a>
             {% endif %}
+                {#<a href="{{ url_for('home') }}">
+                   <i class="fa fa-home" aria-hidden="true"></i>
+                </a>#}
             {% if page.meta.next %}
-                <a class="button button-orange" href="{{ url_for('deck', slide=page.meta.next) }}">Next</a>
+                <a class="button button-orange" href="{{ url_for('deck', slide=page.meta.next) }}">
+                    Next
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </a>
             {% endif %}
         </section>
         <section class="column">

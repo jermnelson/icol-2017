@@ -7,6 +7,20 @@ app = Flask(__name__)
 app.config['FLATPAGES_EXTENSION'] = '.md'
 pages = FlatPages(app)
 
+@app.route("/contact")
+def contact():
+    return render_template("icol-2017/contact.html")
+
+
+@app.route("/references")
+def references():
+    return render_template("icol-2017/references.html")
+
+
+@app.route("/transcript")
+def transcript():
+    return render_template("icol-2017/transcript.html")
+
 @app.route("/<path:slide>")
 def deck(slide):
     page = pages.get_or_404(slide)

@@ -2,12 +2,11 @@
 
 {% block main %}
 <div class="container">
-    <h2>International Conference on Libraries 2017</h2>
     <h1>Lean Libraries from Local Practice to Larger Collaborations</h1>
     <h4>Video Keynote by Jeremy Nelson</h4>
     <div class="row">
         <section class="column column-67">
-            <video controls src="#" width="600px"></video>
+            <video controls src="{{ url_for('static', filename='video/demo.mp4') }}" width="600px"></video>
 
         </section>
         <section class="column">
@@ -30,6 +29,17 @@
                 </li>
             </ul>
             <h3>Resources</h3>
+            <ul>
+                <li>
+                    <a href="{{ url_for('transcript') }}">Video Transcript</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('references') }}">References</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
         </section>
     </div>
 </div>
