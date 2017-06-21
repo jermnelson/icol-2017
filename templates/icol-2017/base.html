@@ -27,7 +27,7 @@
                         <img src="{{ url_for('static', filename='img/icol-2017.png') }}">
                     </a>
                 </div>
-               <h2 class="column" style="margin-top: 1em">International Conference on Libraries 2017</h2>
+               <h2 class="column" style="margin-top: 1em">{% block header_title %}International Conference on Libraries 2017{% endblock %}</h2>
            </div>
        </div>
         {% block main %}{% endblock %}
