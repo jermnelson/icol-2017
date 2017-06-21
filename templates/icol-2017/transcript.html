@@ -1,21 +1,22 @@
 {% extends 'icol-2017/base.html' %}
 
 {% block main %}
-<div class="container">
+<article class="container">
     <h1>Video Transcript</h1>
     <p>
-        Good morning! How are all of you today? Thank-you for the honor
-        and privilege of speaking with all of you. My name is 
+        Hello! How are all of you today? Thank-you for the honor
+        and privilege of speaking with you. My name is 
         <a href="{{ url_for('contact') }}">Jeremy Nelson</a> and I am 
-        the Metadata and Systems Librarian at Colorado College, in
-        the state of Colorado, USA. I am also a co-founder and CTO 
-        of semantic web start-up company 
-        <a href="http://knowledgelinks.io">Knowledge Link LLC</a>. 
-        As the author of <a href="http://becomingaleanlibrary.com/">
+        the academic librarian in Colorado, USA..
+        I am also  co-founder and CTO 
+        of a semantic web start-up <a href="http://knowledgelinks.io">company</a> 
+        I author of <a href="http://becomingaleanlibrary.com/">
         <em>Becoming a Lean Library</em></a>, I have been applying and 
         experimenting with Lean Start-up concepts and principles within
-        my local academic  library and larger projects with library consortium,
-        public libraries, museums and the Library of Congress.
+        my local library and through larger projects with other libraries,
+        <a href="https://coalliance.org/">library consortium</a>,
+        <a href="http://denverpublic.org/">public libraries</a>, museums and even the 
+        <a href="https://loc.gov">Library of Congress</a>.
     </p> 
     <p style="color: grey">00:15</p> 
     <p>
@@ -24,13 +25,38 @@
         with the slides from this talks, links to resources, and a video transcript.
     </p>
     <p>
-        This video is divided into three sections. First we briefly 
-        go over the core concepts behind the Lean Startup management
+        This talk is divided into three sections. First, we briefly 
+        go over a couple of core concepts behind the Lean Startup management
         philosophy with its roots in the Japanese Lean Manufacturing. Lean Manufacturing 
-        introduced Kanban and other just-in-time techniques for minimizing 
-        waste in material inventories and through improvements in mechanical 
-        efficiency are able to improve the quality while reducing costs of the 
-        manufacturing and delivering a product to the customer. 
+        introduced Kanban and other just-in-time techniques that together minimizing 
+        waste and size of material inventories when manufacturing, in the case of 
+        Toyota, cars. Improvements in mechanical 
+        efficiency increase quality while reducing costs of the 
+        manufacturing and delivering a product to the customer through coordinated
+        vertical and horizontal demand driven agreements and contracts between 
+        the many different parties involved in the modern, global manufacturing
+        of complex products. 
+    </p>
+    <p>
+        Libraries traditional do not produce or manufacturing products 
+        (although the addition of 3-D printing to public and academic libraries
+         surprising puts libraries into more of a manufacturing role) but I personally
+        believe we have an increasing important role as a respected authority regarding
+        the local intellectual and scholarly of creative works including books, blog posts,
+        social network postings, photos and video that is being consumed and produced by 
+        our communities.  
+    </p>
+    <p>
+        Our current catalogs and collections represent more than just physical or digital
+        objects but a rich source of relationships and information that although this
+        is currently and overwhelming encoding as MARC or other variants across the 
+        world. The theory and practice of lean libraries has driven a very iterative 
+        development cycle in my own research and work towards unlocking and expanding
+        this knowledge in our current library catalogs into the form of Linked Data.
+    </p>
+    <p>
+        What tools are available to allow libraries to respond to the specific demands
+        of their patrons? 
     </p>
     <p>
         Next, we will look out how to start applying Lean 
@@ -46,6 +72,7 @@
             patron demands for services and resources. My conception of a Lean 
             Library is built upon the principles Eric Ries writes in his book 
         </p>
+        
        <section class="column">
             <img src="#" alt="Eric Ries's Lean Startup book cover"></img>
         </section>
@@ -54,11 +81,25 @@
        From this literature, I want to first highlight what I think is the 
        critical insight from Lean Startups and Lean Manufacturing which is 
        the difference between what is the still dominate form of industrial
-       and corporate structeds base upon researching and then marketing specific
+       and corporate structures base upon researching and then marketing specific
        products that are <strong>Push</strong>ed to customers.
     </p>
     <p>
-
+        The start of a technology project for a new library service or resource starts
+        <strong>Build</strong> step, where taking the requirements driven by three 
+        main sources of pull, People, Organizations, and what I believe is becoming 
+        increasing important, algorithmic sources. From these requirements a 
+        Minimum Viable Product (MVP) is built for initial use by your sources of pull.
+        A library MVP should deliver an improvement in the resource access or work-flow
+        for managing the resource by the library's staff.
     </p>
-</div>
+    
+    <p>  
+        The next step in the loop is <strong>Measure</strong>, identifying key metrics 
+        from which you prepare you for the final step in the project development lifecycle.
+    </p>
+    <p>    
+        Taking the key metrics gathered in the previous step, the <strong>Learn</strong> 
+    </p>
+</article>
 {% endblock %}
