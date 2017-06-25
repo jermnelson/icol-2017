@@ -4,14 +4,16 @@
 <article class="container">
     <h1>Video Transcript</h1>
     <p>
-        Hello! How are all of you today? Thank-you for the honor
-        and privilege of speaking with you. My name is 
+        Hello! How is everyone today? Thank-you for this incredible honor
+        and privilege in speaking with you. My name is 
         <a href="{{ url_for('contact') }}">Jeremy Nelson</a> and I am 
-        the academic librarian in Colorado, USA..
-        I am also  co-founder and CTO 
-        of a semantic web start-up <a href="http://knowledgelinks.io">company</a> 
-        I author of <a href="http://becomingaleanlibrary.com/">
-        <em>Becoming a Lean Library</em></a>, I have been applying and 
+        an academic librarian in Colorado, USA and
+        I am co-founder and CTO 
+        of a semantic web start-up <a href="http://knowledgelinks.io">company</a>, 
+        I am the author of <a href="http://becomingaleanlibrary.com/">
+        <em>Becoming a Lean Library</em></a> published in 2015 by Chandos Publishing
+        from which I'll pull. 
+        I have been applying and 
         experimenting with Lean Start-up concepts and principles within
         my local library and through larger projects with other libraries,
         <a href="https://coalliance.org/">library consortium</a>,
@@ -20,32 +22,57 @@
     </p> 
     <p style="color: grey">00:15</p> 
     <p>
+        This talk is divided into multiple and related topics centering around lean ideas
+        and their applications. First, we will briefly cover the
+        history lean in first manufacturing
+        and then later to more technology products with Lean Startup. We'll go over the 
+        conceptual differences between organizing around traditional
+        <strong>Push</strong> processes manufacturing and organizational structure into a core
+        concepts behind the Lean Startup management
+        philosophy; building services and products that instead <strong>Pull</strong>
+        the requirements directly from final customer, or in our case a libraries,
+        our patrons. From these we take a more practical focus as we go over
+        my experiences developing a <a href="#">Catalog Pull Platform</a> using 
+        Lean Startup project management structure that is made up 
+        iterative and fast project development loops. Each loop is made up of
+        three parts, a <strong>Build</strong>, <strong>Measure</strong>
+        and <strong>Learn</strong> phase. Finally I'll discuss my own
+        experiences of applying lean principles in developing library technology for 
+        my local library as well as expanding to collaborative projects with other 
+        libraries and organizations at regional and national levels.
+    </p>
+    <p>
         Before I go further; there is an accompanying website at 
         <a href="{{ url_for('home') }}">http://becomingaleanlibrary.com/icol2017</a> 
         with the slides from this talks, links to resources, and a video transcript.
     </p>
-    <p>
-        This talk is divided into three sections. First, we briefly 
-        go over a couple of core concepts behind the Lean Startup management
-        philosophy with its roots in the Japanese Lean Manufacturing. Lean Manufacturing 
+    <hr>
+    <h3><a href="{{ url_for('deck', slide='what-is-a-lean-library') }}">What is a Lean Library?</a></h3>
+    <p>   
+        With its roots in the Japanese Lean Manufacturing. Lean Manufacturing 
         introduced Kanban and other just-in-time techniques that together minimizing 
-        waste and size of material inventories when manufacturing, in the case of 
-        Toyota, cars. Improvements in mechanical 
-        efficiency increase quality while reducing costs of the 
-        manufacturing and delivering a product to the customer through coordinated
+        waste and size of material inventories when manufacturing products, in the case of 
+        Toyota, cars. Improvements in mechanical and information
+        efficiency increased quality the quality of the end product, while reducing costs 
+        of the manufacturing and delivering a product to the customer. Accomplished
+        through coordinated
         vertical and horizontal demand driven agreements and contracts between 
         the many different parties involved in the modern, global manufacturing
         of complex products. 
     </p>
+
     <p>
         Libraries traditional do not produce or manufacturing products 
         (although the addition of 3-D printing to public and academic libraries
          surprising puts libraries into more of a manufacturing role) but I personally
-        believe we have an increasing important role as a respected authority regarding
-        the local intellectual and scholarly of creative works including books, blog posts,
+        believe we have an increasingly important role as a respected authority regarding
+        the local intellectual and scholarly of creative works. Books, blog posts,
         social network postings, photos and video that is being consumed and produced by 
-        our communities.  
+        our communities. This history of what is happening preserving this point of the use
+        by the 
+
     </p>
+    Librarians have a things 
     <p>
         Our current catalogs and collections represent more than just physical or digital
         objects but a rich source of relationships and information that although this
@@ -53,24 +80,23 @@
         world. The theory and practice of lean libraries has driven a very iterative 
         development cycle in my own research and work towards unlocking and expanding
         this knowledge in our current library catalogs into the form of Linked Data.
+        Linked data is a way to structure information more consumable and interoablity with
+        other systems.
     </p>
     <p>
         What tools are available to allow libraries to respond to the specific demands
         of their patrons? 
     </p>
     <p>
-        Next, we will look out how to start applying Lean 
-        principles locally in your own library. The final third will be on
-        collaborating with other libraries and organizations, using Lean 
-        concepts, to improves outcomes for our patrons and communities.
+        
     </p>
-    <p style="color: grey">01:00</p>
     <div class="row">
         <p class="column column-80">
             What is a Lean Library? A Lean Library is a library that adopts 
             lean principles, strategies, and techniques for responding to 
             patron demands for services and resources. My conception of a Lean 
             Library is built upon the principles Eric Ries writes in his book 
+            <a href="#">Lean Startup</a>
         </p>
         
        <section class="column">
@@ -84,6 +110,8 @@
        and corporate structures base upon researching and then marketing specific
        products that are <strong>Push</strong>ed to customers.
     </p>
+    TRANSITION SUCKS!!!!
+
     <p>
         The start of a technology project for a new library service or resource starts
         <strong>Build</strong> step, where taking the requirements driven by three 
@@ -97,9 +125,11 @@
     <p>  
         The next step in the loop is <strong>Measure</strong>, identifying key metrics 
         from which you prepare you for the final step in the project development lifecycle.
+        Tracking and used in the nextpahse
     </p>
     <p>    
         Taking the key metrics gathered in the previous step, the <strong>Learn</strong> 
     </p>
+    <p>Iterative, small lean development.
 </article>
 {% endblock %}
