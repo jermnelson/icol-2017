@@ -56,89 +56,25 @@
         with the slides from this talks, links to resources, and a video transcript.
     </p>
     <hr>
-    <h3><a href="{{ url_for('deck', slide='what-is-a-lean-library') }}">What is a Lean Library?</a></h3>
-    <p>   
-        With its roots in the Japanese Lean Manufacturing. Lean Manufacturing 
-        introduced Kanban and other just-in-time techniques that together minimizing 
-        waste and size of material inventories when manufacturing products, in the case of 
-        Toyota, cars. Improvements in mechanical and information
-        efficiency increased quality the quality of the end product, while reducing costs 
-        of the manufacturing and delivering a product to the customer. Accomplished
-        through coordinated
-        vertical and horizontal demand driven agreements and contracts between 
-        the many different parties involved in the modern, global manufacturing
-        of complex products. 
-    </p>
-
-    <p>
-        Libraries traditional do not produce or manufacturing products 
-        (although the addition of 3-D printing to public and academic libraries
-         surprising puts libraries into more of a manufacturing role) but I personally
-        believe we have an increasingly important role as a respected authority regarding
-        the local intellectual and scholarly of creative works. Books, blog posts,
-        social network postings, photos and video that is being consumed and produced by 
-        our communities. This history of what is happening preserving this point of the use
-        by the 
-
-    </p>
-    Librarians have a things 
-    <p>
-        Our current catalogs and collections represent more than just physical or digital
-        objects but a rich source of relationships and information that although this
-        is currently and overwhelming encoding as MARC or other variants across the 
-        world. The theory and practice of lean libraries has driven a very iterative 
-        development cycle in my own research and work towards unlocking and expanding
-        this knowledge in our current library catalogs into the form of Linked Data.
-        Linked data is a way to structure information more consumable and interoablity with
-        other systems.
-    </p>
-    <p>
-        What tools are available to allow libraries to respond to the specific demands
-        of their patrons? 
-    </p>
-    <p>
-        
-    </p>
-    <div class="row">
-        <p class="column column-80">
-            What is a Lean Library? A Lean Library is a library that adopts 
-            lean principles, strategies, and techniques for responding to 
-            patron demands for services and resources. My conception of a Lean 
-            Library is built upon the principles Eric Ries writes in his book 
-            <a href="#">Lean Startup</a>
-        </p>
-        
-       <section class="column">
-            <img src="#" alt="Eric Ries's Lean Startup book cover"></img>
-        </section>
-    </div>
-    <p>
-       From this literature, I want to first highlight what I think is the 
-       critical insight from Lean Startups and Lean Manufacturing which is 
-       the difference between what is the still dominate form of industrial
-       and corporate structures base upon researching and then marketing specific
-       products that are <strong>Push</strong>ed to customers.
-    </p>
-    TRANSITION SUCKS!!!!
-
-    <p>
-        The start of a technology project for a new library service or resource starts
-        <strong>Build</strong> step, where taking the requirements driven by three 
-        main sources of pull, People, Organizations, and what I believe is becoming 
-        increasing important, algorithmic sources. From these requirements a 
-        Minimum Viable Product (MVP) is built for initial use by your sources of pull.
-        A library MVP should deliver an improvement in the resource access or work-flow
-        for managing the resource by the library's staff.
-    </p>
-    
-    <p>  
-        The next step in the loop is <strong>Measure</strong>, identifying key metrics 
-        from which you prepare you for the final step in the project development lifecycle.
-        Tracking and used in the nextpahse
-    </p>
-    <p>    
-        Taking the key metrics gathered in the previous step, the <strong>Learn</strong> 
-    </p>
-    <p>Iterative, small lean development.
+    {% set what_is = pages.get('what-is-a-lean-library') %}
+    <h1><a href="{{ url_for('deck', slide='what-is-a-lean-library') }}">{{ what_is.title }}</a></h1>
+    {{ what_is.html|safe }}
+    {% set pull_vs_push = pages.get('pull-vs-push-for-library-services') %}
+    <h1><a href="{{ url_for('deck', slide='pull-vs-push-for-library-services') }}">{{ pull_vs_push.title }}</a></h1>
+    {{ pull_vs_push.html|safe }}
+    <hr>
+    {% set bml = pages.get('build-measure-learn-project-management') %}
+    <h1><a href="{{ url_for('deck', slide='build-measure-learn-project-management') }}">{{ bml.title }}</a></h1>
+    {{ bml.html|safe }}
+    <hr>
+    {% set lean_local = pages.get('starting-lean-locally') %}
+    <h1><a href="{{ url_for('deck', slide='starting-lean-locally') }}">{{ lean_local.title }}</a></h1>
+    {{ lean_local.html|safe }}
+    <hr>
+    {% set collab_partners = pages.get('collaborating-partners') %}
+    <h1><a href="{{ url_for('deck', slide='collaborating-partners') }}">{{ collab_partners.title }}</a></h1>
+    {{ collab_partners.html|safe }}
+    <hr>
+    <h1>Finishing up &hellip;</h1>
 </article>
 {% endblock %}

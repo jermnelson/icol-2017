@@ -19,7 +19,8 @@ def references():
 
 @app.route("/transcript")
 def transcript():
-    return render_template("icol-2017/transcript.html")
+    return render_template("icol-2017/transcript.html", 
+        pages=pages)
 
 @app.route("/<path:slide>")
 def deck(slide):
