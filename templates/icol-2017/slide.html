@@ -25,5 +25,18 @@
             {{ page.html|safe }}
         </section>
     </div>
+    {% if page.meta.animations %}
+        <button onclick="{{ page.meta.animations.split(",")[0] }}()">Run</button>
+    {% endif %}
 </div>
 {% endblock %}
+
+{% block scripting %}
+{# if page.meta.animations %}
+<script type="text/javascript">
+{% for row in page.meta.animations.split(",") %}
+    {{ row }}();
+{% endfor %}
+</script>
+{% endif #}
+{% endblock scripting %}

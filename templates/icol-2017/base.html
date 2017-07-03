@@ -42,5 +42,9 @@
                 </section>
             </div>
        </footer>
+        <script src="{{ url_for('static', filename='js/snap.svg-min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/default.js') }}"></script>
+        {% block scripting %}{% endblock scripting %}
+
     </body>
 </html>
