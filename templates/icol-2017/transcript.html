@@ -7,16 +7,16 @@
         Hello and greetings from Colorado Springs, Colorado in the United States. 
         Thank-you for this incredible honor
         and privilege to speak with you today at the 2017 International
-        Conference on Libraries . My name is 
+        Conference on Libraries. My name is 
         <a href="{{ url_for('contact') }}">Jeremy Nelson</a> and I am 
         an academic librarian at Colorado College and
         I am co-founder and CTO 
         of a semantic web start-up <a href="http://knowledgelinks.io">company</a>, 
-        I am the author of <a href="http://becomingaleanlibrary.com/">
+        I am also the author of <a href="http://becomingaleanlibrary.com/">
         <em>Becoming a Lean Library</em></a> published in 2016 by Chandos Publishing.
         I have been applying and 
         experimenting with Lean Start-up concepts and principles within
-        my local library and through larger projects with other libraries,
+        my local library and through larger projects with other academic libraries,
         <a href="https://coalliance.org/">library consortium</a>,
         <a href="http://denverpublic.org/">public libraries</a>, museums and even the 
         <a href="https://loc.gov">Library of Congress</a>.
@@ -26,10 +26,10 @@
         This talk is divided into multiple and related topics centering around lean ideas
         and their applications. First, we will briefly cover the
         history of "lean" with it's start in the manufacturing sector in Japan
-        and then later to more technology products in Silicon Valley with Lean Startup.
+        and then later to more technology products in Silicon Valley with Lean Startup movement.
         We'll go over the 
         conceptual differences between the traditional
-        <strong>Push</strong> manufacturing and organizations into what is a core
+        <strong>Push</strong> processes in manufacturing and organizational structures into what is a core
         concept behind lean,  building services and products that 
         <strong>Pull</strong>
         the requirements directly from intermediate and final customers, or in our case as 
@@ -45,7 +45,10 @@
         three parts, a <strong>Build</strong> phase where a <strong>Minimum Viable Product</strong>
         is created or expanded upon, a <strong>Measure</strong> phase where the MVP is tested with your patrons
         or staff and a <strong>Learn</strong> phase that takes what you measured and your experiences to
-        grow you and your library's knowledge and to prepare for the next BML loop. 
+        grow you and your library's knowledge and make a decision on what to do next. Your metrics may indicate
+        that the project should be abandoned, that project would start the next BML loop, or the project could 
+        <strong>pivot</strong>
+        due to technology change in library or general computing or personnel changes in your organization. 
         Finally I'll discuss applying lean principles in 
         developing library technology for 
         my local academic library as well as expanding to collaborative projects with other 
@@ -55,11 +58,18 @@
         Before I go further; there is an accompanying website at 
         <a href="{{ url_for('home') }}">http://becomingaleanlibrary.com/icol-2017</a> 
         with the slides from this talks, links to resources, and a video transcript.
+        In this first topic, I will switch over to a screen-cast view.
     </p>
     <hr>
     {% set what_is = pages.get('what-is-a-lean-library') %}
     <h1><a href="{{ url_for('deck', slide='what-is-a-lean-library') }}">{{ what_is.title }}</a></h1>
     {{ what_is.html|safe }}
+    <hr>
+    <p>
+    In the next topic screen-cast, we will and compare and contrast <strong>Push</strong> processes verses 
+    <strong>Pull</strong> based approaches favored by lean manufactures and lean startups. 
+    </p>
+    <hr>
     {% set pull_vs_push = pages.get('pull-vs-push-for-library-services') %}
     <h1><a href="{{ url_for('deck', slide='pull-vs-push-for-library-services') }}">{{ pull_vs_push.title }}</a></h1>
     {{ pull_vs_push.html|safe }}
