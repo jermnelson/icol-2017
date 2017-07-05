@@ -11,3 +11,8 @@ h1 {
     background-color: transparent;
     color: #431553;
 }
+
+#animate-push-vs-pull {
+    width: 600;
+    height: 800;
+}
