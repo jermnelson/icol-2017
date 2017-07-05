@@ -17,9 +17,13 @@ function pullAnimation() {
 function pushAnimation() {
     var push = Snap("#animate-push");
     var car_grp = push.g();
-    var car_frame = car_grp.image("/static/img/car-shell.png");
-    //car_grp.animate(500, 500);
+    var car_frame = car_grp.image("/static/img/car-shell.png").attr({
+        x: 300,
+        y: 50});
     var tires_grp = push.g();
-    var tires = tires_grp.image("/static/img/tires.png");
+    var tires = tires_grp.image("/static/img/tires.png").attr({
+        x: 300,
+        y: 300});
+//    tires.animate({ transform: 't300,t200'}, 1000);
 
 }
