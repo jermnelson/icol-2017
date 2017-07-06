@@ -17,11 +17,28 @@ function pullAnimation() {
         y: 100
     });
 
+    var left_tire = pull.circle(340, 350, 20);
+    left_tire.attr({ fill: "white",
+                     stroke: "black",
+                     strokeWidth: 5});
+    var right_tire = left_tire.clone();
+
+    right_tire.transform("t158");
+
+    var tires_grp = pull.g(left_tire, right_tire).attr({ visibility: "hidden" });
 
     var pull_flow, step_desc, step_title ;
     var arrow_attrs = { stroke: 'green',
                         fill: 'green',
                         strokeWidth: 5 };
+
+    var getKanbanLabel = function(start_x) {
+        var title = pull.text(start_x, 240, "Kanban Card");
+        title.attr({ "font-size": "12px", 
+            "font-weight": 'bold' });
+        title.transform("r-65");
+        return title
+    }
  
     var pullArrow = function(start_x) {
         var y_pos = 380;
@@ -45,6 +62,7 @@ function pullAnimation() {
         stroke: "#000",
         strokeWidth: 2
     });
+    var title2, title2, title3;
     var panel_grp = pull.g(steel_panels).attr({ visibility: "hidden" });
 
 
@@ -52,13 +70,8 @@ function pullAnimation() {
         { fill: "red",
           stroke: "black",
           strokeWidth: 2 });
-    var kanbanTitle = pull.text(95, 240, "Kanban Card");
-    kanbanTitle.attr({ "font-size": "12px", 
-        "font-weight": 'bold' });
-    kanbanTitle.transform("r-65");
+    var kanbanTitle = getKanbanLabel(90);
     var kanban_grp = pull.g(pullKanban, kanbanTitle).attr({ visibility: "hidden" });
-
-
     var pullStep1 = function() {
         step_title = pull.text(10, 65, "Step 1: Customer orders a red car").attr({
             "font-size": "24px"
@@ -76,21 +89,20 @@ function pullAnimation() {
             kanban_grp.animate({ transform: "t1" }, 2000, function() {
                 pullKanbanTires = pullKanban.clone();
                 pullKanbanTires.attr({ x: 220 });
-                title2 = kanbanTitle.clone();
-                title2.attr( { x: 60, y: 280 });
+                title2 = getKanbanLabel(210); 
                 step_desc3 = step_desc.clone();
                 step_desc3.attr( { text: "Tire Station Triggered", 
-                                   x: 225,
-                                   y: 280 } );
+                                   x: 190,
+                                   y: 290 } );
                 pullKanbanTires.animate({ transform: "t1" }, 2000, function() {
+                    
                     step_desc4 = step_desc.clone();
                     step_desc4.attr( { text: "Car Panels Station Triggered",
                                           x: 425 });
                     pullKanbanPanels = pullKanban.clone();
                     pullKanbanPanels.attr({ x: 450 });
+                    title3 = getKanbanLabel(445);
                     pullKanbanPanels.animate({ transform: "t1" }, 2000, function() {
-                        step_desc2.attr({ visibility: "hidden" });
-                        step_desc3.attr({ visibility: "hidden" });
                         step_desc4.attr({ visibility: "hidden" });
                         pullStep2();
                     });
@@ -109,12 +121,13 @@ function pullAnimation() {
                              y: 150 }); 
         panel_grp.attr({ visibility: "" });
         steel2 = panel_grp.clone();
-        panel_grp.attr({ visibility: "hidden" });
         steel2.animate({ transform: "t-30, 150,s0.5, t50"},  1000, function() {
             pull_flow = pullArrow(title_x+150, 380);
             var steel3 = panel_grp.clone();
-            steel3.animate({ transform: "M580,50 t100,150s0.5, t-50" }, 2000, function() {
-                 steel2.animate({ transform: "s0", filter: blur }, 2000);
+            steel3.animate({ transform: "M580,50 t100,150s0.5, t50" }, 2000, function() {
+                panel_grp.attr({ visibility: "hidden" });
+
+                steel2.animate({ transform: "s0", filter: blur }, 2000);
                 steel3.animate({ transform: "s0", filter: blur }, 2000);
                 step_desc.attr({ text: "Steel Panels stamped into Car Frame" });
                 car_grp.transform("s.0");
@@ -122,7 +135,8 @@ function pullAnimation() {
                 car_grp.animate({ transform: "S1.5" }, 2500, function() {
                     pullKanbanPanels.attr( { fill: "green" });
                     step_desc.attr({ text: "Kanban Card switched to geen" });
-                    pullKanbanPanels.animate({ transform: "r90s.1t0,-25" }, 2000, pullStep3());
+                    title3.remove();
+                    pullKanbanPanels.animate({ transform: "r90s.1t0,-25" }, 2000, pullStep3);
                 });
             });
 
@@ -130,6 +144,30 @@ function pullAnimation() {
     }
 
     var pullStep3 = function() {
+        var title_x = 325;
+        pullKanbanPanels.remove();
+        step_title.attr({ text: "Step 3: Attach Wheels"});
+        step_desc.attr({ text: "Car frame moved to next station",
+                            x:title_x,
+                            y: 180 });
+        tires_grp.attr({ visibility: "" });
+        
+        //pull_flow = pullArrow(title_x+150, 380);
+        
+        car_grp.animate({ transform: "t-175,s1.25" }, 3000, function() {
+            step_desc.attr({ text: "Tires are moved and attached to car", 
+                             x: (title_x - 5),
+                             y: 180 });  
+            tires_grp.animate( { transform: "t0,-80" }, 4000, function() {
+                pullKanbanTires.attr({ fill: "green" });
+                step_desc.attr({ text: "Kanban Card switched to green" });
+                pullKanbanTires.animate( {transform: "r90s.1t0,-25" }, 2000, pullStep4);   
+            });
+        });
+
+    }
+
+    var pullStep4 = function() {
 
     }
 
