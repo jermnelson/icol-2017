@@ -11,7 +11,7 @@ products based upon the organization's predictions and planning.
 
 <button onclick="pushAnimation()">Show Push <i class="fa fa-film"></i></button>
 
-<svg id="animate-push" width=800 height=600></svg>
+<svg id="animate-push" width=800 height=500></svg>
 
 
 ## Pull
@@ -24,6 +24,6 @@ customers.
 <button onclick="pullAnimation()">Show Pull <i class="fa fa-film"></i></button>
 
 
-<svg id="animate-pull" width=800 height=600></svg>
+<svg id="animate-pull" width=800 height=500></svg>
 
 

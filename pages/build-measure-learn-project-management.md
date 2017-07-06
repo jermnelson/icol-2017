@@ -77,4 +77,33 @@ that starts here but continues in full force in the final phase of BML Loop, the
 **Learn** phase.
 
 ## Learn
-Taking the key metrics gathered in the previous step, the <strong>Learn</strong> 
+Taking the key metrics and measurements gathered in the previous step, 
+the **Learn** phase involves analyzing these results and then making one of the
+following decisions base on the values of these **actionable metrics**.
+
+<ol>
+    <li><strong><i class="fa fa-check-square"></i> Continue</strong><br>
+        <p>If the results of the actionable metrics are positive and validate your
+           hypotheses, the 
+           decision to *continue* the project is made and then you prepare for 
+           the next **Build-Measure-Learn** loop.</p>
+    </li>
+    <li><strong><i class="fa fa-share"></i> Pivot</strong>
+        <p>A <strong>pivot</strong> occurs in a project when the actionable metrics
+            indicate the current project is not meeting the predictions of the
+            hypotheses of the <strong>Build</strong>. However, the actionable metrics
+            in this case suggest that if the project changed focus or technology called
+            a <strong>pivot</strong> in the Lean Startup vocabulary.
+        </p>
+    </li>
+    <li><strong><i class="fa fa-ban text-danger"></i> Terminate</strong>
+        <p>The other action that occurs when either the actionable metrics suggest
+            the project is failing, either the measurements do not support the
+            hypotheses or other external forces, like technology change or administrative
+            decisions, then the project will cease. 
+        </p>
+    </li>
+</ol>
+</ol>
+
+Another important task in the **Learn** phase is to integrate the results into 
