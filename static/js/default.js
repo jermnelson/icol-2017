@@ -38,6 +38,10 @@ function pullAnimation() {
          y: 180
     });
 
+    var order_grp = pull.g().attr({ visibility: "hidden" });
+    var order_img = order_grp.image("/static/img/car-order.png").attr(
+            { x: 50, y: 110 });
+    
 
 
     var getKanbanLabel = function(start_x) {
@@ -80,6 +84,7 @@ function pullAnimation() {
           stroke: "black",
           strokeWidth: 2,
           visibility: "hidden" });
+
     var kanbanTitle = getKanbanLabel(90);
     kanbanTitle.attr({ visibility: "hidden" });
 
@@ -89,35 +94,32 @@ function pullAnimation() {
         });
         step_desc = pull.text(110, 160, "Customer orders and purchases car");
         customers_grp.attr({ visibility: "" });
-        var order_grp = pull.g();
-        var order_img = order_grp.image("/static/img/car-order.png").attr(
-            { x: 50, y: 110 });
-        order_grp.animate({ transform: "t10,75" }, 2000, function() {
+        order_grp.attr( { visibility: "" }).animate({ transform: "t10,75" }, 5000, function() {
             step_desc2 = step_desc.clone();
-            step_desc2.attr({ text: "Final Step Station",
+            step_desc2.attr({ text: "Step 4 Paint and Finish Station",
                                 y: 185 });
             pullKanban.attr({ visibility: "" });
             kanbanTitle.attr({ visibility: "" });
-            pullKanban.animate({ transform: "t1" }, 2000, function() {
+            pullKanban.animate({ transform: "t1" }, 5000, function() {
                 pullKanbanTires = pullKanban.clone();
                 pullKanbanTires.attr({ x: 220 });
                 pullTiresTitle = getKanbanLabel(210); 
                 step_desc3 = step_desc.clone();
-                step_desc3.attr( { text: "Tire Station", 
+                step_desc3.attr( { text: "Step 3 Tire Station", 
                                    x: 190,
                                    y: 290 } );
                 
                 pull_flow = pullArrow(150);
-                pullKanbanTires.animate({ transform: "t1" }, 2000, function() {
+                pullKanbanTires.animate({ transform: "t1" }, 5000, function() {
                     
                     step_desc4 = step_desc.clone();
-                    step_desc4.attr( { text: "Car Panels Station",
+                    step_desc4.attr( { text: "Step 2 Car Panels Station",
                                           x: 425 });
                     pullKanbanPanels = pullKanban.clone();
                     pullKanbanPanels.attr({ x: 450 });
                     pullPanelsTitle = getKanbanLabel(445);
                     pull_flow = pullArrow(275);
-                    pullKanbanPanels.animate({ transform: "t1" }, 2000, function() {
+                    pullKanbanPanels.animate({ transform: "t1" }, 6000, function() {
                         step_desc4.attr({ visibility: "hidden" });
                         pull_flow = pullArrow(425);
                         pullStep2();
@@ -151,7 +153,7 @@ function pullAnimation() {
                     pullKanbanPanels.attr( { fill: "green" });
                     step_desc.attr({ text: "Kanban Card switched to geen" });
                     pullPanelsTitle.remove();
-                    pullKanbanPanels.animate({ transform: "r90s.1t0,-25" }, 2000, pullStep3);
+                    pullKanbanPanels.animate({ transform: "r90s.1t0,-25" }, 5000, pullStep3);
                 });
             });
 
@@ -185,10 +187,10 @@ function pullAnimation() {
         var title_x = 175;
         //var car_grp2 = car_grp.clone();
         //var tires2_grp = tires_grp.clone();
-        step_title.attr({ text: "Step 4: Paint frame" });
+        step_title.attr({ text: "Step 4: Paint frame and Finish" });
         step_desc.attr({  text: "Car is moved to final step",
                              x: title_x,
-                             y: 180 });
+                             y: 210 });
         pullKanbanTires.remove();
         step_desc3.remove();
         car_grp.animate({ transform: "t-350,0,s1.25"}, 2000);
@@ -199,8 +201,16 @@ function pullAnimation() {
             finished_grp.attr({ visibility: "" }); 
             finished_grp.animate({ transform: "t40,0" }, 1500, function() {
                 pullKanban.attr( { fill: "green" });
-                step_desc2.attr( { text: "Kanban Card switched to green" });
-                step_desc.attr( { text: "Car is delivered to customers" });
+                pullKanban.animate({ transform: "r90s.1" })
+                step_desc.attr(
+                    { text: "Car is ready for customers",
+                      "font-size": "18px" }).animate(
+                        { transform: "t-20,-50" }, 3000, function() {
+                            pullKanban.remove();                                                
+                            kanbanTitle.remove();
+                            step_desc2.remove();
+                            order_img.remove();
+                    });
             });
         }); 
     }
@@ -276,7 +286,7 @@ function pushAnimation() {
         step_desc = push.text(title_x, 80, "Raw steel panels transported to assembly line ");
         panel_grp.attr({ visibility: "" });
         var steel2 = steel_panels.clone();
-        steel2.animate({ transform: "t-30, 150,s0.5, t50"},  1000, function() {
+        steel2.animate({ transform: "t-30, 150,s0.5, t50"},  5000, function() {
             push_flow = pushArrow(title_x+150, 380);
             //top_line.animate({ transform: "t+150, 375" }, 5000);
             var steel3 = steel_panels.clone();
@@ -287,7 +297,7 @@ function pushAnimation() {
                 step_desc.attr({ text: "Steel Panels stamped into Car Frame" });
                 car_grp.transform("s.0");
                 car_grp.attr({ visibility: ""});
-                car_grp.animate({ transform: "S1.5" }, 2500, pushStep2);
+                car_grp.animate({ transform: "S1.5" }, 6000, pushStep2);
             });
         });
     }
@@ -304,7 +314,7 @@ function pushAnimation() {
             step_desc.attr({ text: "Tires are moved and attached to car", 
                              x: (title_x - 5),
                              y: 180 });  
-            tires_grp.animate( { transform: "t0,-80" }, 4000, function() {
+            tires_grp.animate( { transform: "t0,-80" }, 6000, function() {
                 pushStep3();   
             });
         });
@@ -326,7 +336,7 @@ function pushAnimation() {
            step_desc.attr({ text: "Car is painted" })
            finished_grp.attr({ visibility: "" });
            push_flow = pushArrow(title_x+50, 380);
-           finished_grp.animate({ transform: "t-100,0" }, 4000, function() {
+           finished_grp.animate({ transform: "t-100,0" }, 5000, function() {
                 pushStep4();
             });
         });
@@ -341,13 +351,13 @@ function pushAnimation() {
         var tv_grp = push.g();
         var tv_img = tv_grp.image("/static/img/tv-buy.png").attr({ x: 10, y: 120 });
         push_flow = pushArrow(title_x+80, 380)
-        tv_grp.animate({ transform: "t0,80,s.4" }, 2000, function() {
+        tv_grp.animate({ transform: "t0,80,s.4" }, 5000, function() {
             step_desc.attr({ text: "Customer purchases car" });
             tv_grp.attr({ visibility: "hidden" });
             var money_grp = push.g();
             var money_img = money_grp.image("/static/img/dollar.png").attr(
                 { y: 80, x: 20 });
-            money_grp.animate({ transform: "t50,120" }, 2000, function() {
+            money_grp.animate({ transform: "t50,120" }, 5000, function() {
                 finished_grp.animate({ transform: "t-100,0" }, 1000); 
             });
         });

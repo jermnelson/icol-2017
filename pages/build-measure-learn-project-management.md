@@ -79,24 +79,25 @@ that starts here but continues in full force in the final phase of BML Loop, the
 ## Learn
 Taking the key metrics and measurements gathered in the previous step, 
 the **Learn** phase involves analyzing these results and then making one of the
-following decisions base on the values of these **actionable metrics**.
+following decisions based on the values of the **actionable metrics**.
 
 <ol>
-    <li><strong><i class="fa fa-check-square"></i> Continue</strong><br>
+    <li><strong  style="color: green"><i class="fa fa-check-square"></i> Continue</strong><br>
         <p>If the results of the actionable metrics are positive and validate your
            hypotheses, the 
-           decision to *continue* the project is made and then you prepare for 
-           the next **Build-Measure-Learn** loop.</p>
+           decision to <em>continue</em> the project is made and then you prepare for 
+           the next <strong>Build-Measure-Learn</strong> loop.</p>
     </li>
-    <li><strong><i class="fa fa-share"></i> Pivot</strong>
+    <li><strong style="color: blue"><i class="fa fa-share"></i> Pivot</strong>
         <p>A <strong>pivot</strong> occurs in a project when the actionable metrics
             indicate the current project is not meeting the predictions of the
-            hypotheses of the <strong>Build</strong>. However, the actionable metrics
-            in this case suggest that if the project changed focus or technology called
-            a <strong>pivot</strong> in the Lean Startup vocabulary.
+            hypotheses of the <strong>Build</strong> phase. However, the actionable metrics
+            suggest that if the project changed focus or technology called
+            a <strong>pivot</strong> in the Lean Startup vocabulary, that the project
+            could serve a new or related purpose.
         </p>
     </li>
-    <li><strong><i class="fa fa-ban text-danger"></i> Terminate</strong>
+    <li><strong style="color: red"><i class="fa fa-ban text-danger"></i> Terminate</strong>
         <p>The other action that occurs when either the actionable metrics suggest
             the project is failing, either the measurements do not support the
             hypotheses or other external forces, like technology change or administrative
@@ -105,5 +106,3 @@ following decisions base on the values of these **actionable metrics**.
     </li>
 </ol>
 </ol>
-
-Another important task in the **Learn** phase is to integrate the results into 
