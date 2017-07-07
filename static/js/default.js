@@ -78,9 +78,10 @@ function pullAnimation() {
     var pullKanban = pull.rect(100, 200, 50, 75).attr(
         { fill: "red",
           stroke: "black",
-          strokeWidth: 2 });
+          strokeWidth: 2,
+          visibility: "hidden" });
     var kanbanTitle = getKanbanLabel(90);
-    var kanban_grp = pull.g(pullKanban, kanbanTitle).attr({ visibility: "hidden" });
+    kanbanTitle.attr({ visibility: "hidden" });
 
     var pullStep1 = function() {
         step_title = pull.text(10, 65, "Step 1: Customer orders a red car").attr({
@@ -95,8 +96,9 @@ function pullAnimation() {
             step_desc2 = step_desc.clone();
             step_desc2.attr({ text: "Final Step Station",
                                 y: 185 });
-            kanban_grp.attr({ visibility: "" });
-            kanban_grp.animate({ transform: "t1" }, 2000, function() {
+            pullKanban.attr({ visibility: "" });
+            kanbanTitle.attr({ visibility: "" });
+            pullKanban.animate({ transform: "t1" }, 2000, function() {
                 pullKanbanTires = pullKanban.clone();
                 pullKanbanTires.attr({ x: 220 });
                 pullTiresTitle = getKanbanLabel(210); 
@@ -198,11 +200,7 @@ function pullAnimation() {
             finished_grp.animate({ transform: "t40,0" }, 1500, function() {
                 pullKanban.attr( { fill: "green" });
                 step_desc2.attr( { text: "Kanban Card switched to green" });
-                pullKanbanTires.animate( {transform: "r90s.1t0,-520" }, function() {
-                        pullKanban.remove();
-                        step_desc2.remove();
-                        step_desc.attr( { text: "Car is delivered to customers" });
-                });
+                step_desc.attr( { text: "Car is delivered to customers" });
             });
         }); 
     }
