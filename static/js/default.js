@@ -5,7 +5,7 @@ function pullAnimation() {
         });
     pull.append(title);
 
-    var car_frame = pull.image("/static/img/car-shell.png").attr({
+    var car_frame = pull.image("/icol-2017/static/img/car-shell.png").attr({
         x: 500,
         y: 200
      });
@@ -13,7 +13,7 @@ function pullAnimation() {
 
 
     var customers_grp = pull.g().attr({ visibility: "hidden" });
-    var customers = customers_grp.image("/static/img/people.png").attr({
+    var customers = customers_grp.image("/icol-2017/static/img/people.png").attr({
         y: 100
     });
 
@@ -33,13 +33,13 @@ function pullAnimation() {
                         strokeWidth: 5 };
 
     var finished_grp = pull.g().attr({ visibility: "hidden" });
-    var finished_car = finished_grp.image("/static/img/finished-car.png").attr({
+    var finished_car = finished_grp.image("/icol-2017/static/img/finished-car.png").attr({
          x: 145,
          y: 180
     });
 
     var order_grp = pull.g().attr({ visibility: "hidden" });
-    var order_img = order_grp.image("/static/img/car-order.png").attr(
+    var order_img = order_grp.image("/icol-2017/static/img/car-order.png").attr(
             { x: 50, y: 110 });
     
 
@@ -225,7 +225,7 @@ function pushAnimation() {
             "font-size": "36px"
         });
     push.append(title);
-    var car_frame = push.image("/static/img/car-shell.png").attr({
+    var car_frame = push.image("/icol-2017/static/img/car-shell.png").attr({
         x: 500,
         y: 200
      });
@@ -247,12 +247,12 @@ function pushAnimation() {
 
     var tires_grp = push.g(left_tire, right_tire).attr({ visibility: "hidden" });
     var finished_grp = push.g().attr({ visibility: "hidden" });
-    var finished_car = finished_grp.image("/static/img/finished-car.png").attr({
+    var finished_car = finished_grp.image("/icol-2017/static/img/finished-car.png").attr({
         x: 125,
         y: 180
     });
     var customers_grp = push.g().attr({ visibility: "hidden" });
-    var customers = customers_grp.image("/static/img/people.png").attr({
+    var customers = customers_grp.image("/icol-2017/static/img/people.png").attr({
         y: 125
     });
 
